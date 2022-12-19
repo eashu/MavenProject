@@ -19,7 +19,7 @@ pipeline {
                 sh 'scp -o StrictHostKeyChecking=no /var/jenkins_home/workspace/MavenProject/webapp/target/webapp.war /var/jenkins_home/workspace/MavenProject/'               
                          }               
                       }
-             }
+             
      
         stage('create image and container') {
                   steps {
@@ -30,6 +30,7 @@ pipeline {
                       
                        }              
                   }
+     }
             
 }
 
