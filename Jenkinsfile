@@ -25,6 +25,8 @@ pipeline {
                   steps {
                       dir('/var/jenkins_home/workspace/MavenProject/')   {
                           
+                          sh 'docker build -t tunagar/mavenapp . '
+                          
                           
                       }
                       
