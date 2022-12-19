@@ -20,7 +20,7 @@ pipeline {
                          }               
                       }
              }
-     stages {
+     
         stage('create image and container') {
                   steps {
                       dir('/var/jenkins_home/workspace/MavenProject/')   {
@@ -30,6 +30,6 @@ pipeline {
                       
                        }              
                   }
-            }
+            
 }
 
