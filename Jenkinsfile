@@ -23,10 +23,9 @@ pipeline {
              
      
         stage('create image and container') {
-                  steps {
+                  steps {                     
                       
-                      
-                    /var/jenkins_home/workspace/MavenProject/')   {
+                    dir('/var/jenkins_home/workspace/MavenProject/')   {
                           
                           sh 'docker build -t tunagar/mavenapp . '
                           
