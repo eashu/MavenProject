@@ -23,6 +23,14 @@ pipeline {
      
         stage('create image and container') {
                   steps {
+                      
+                      agent {
+                docker {
+                    image 'gradle:6.7-jdk11'
+                    
+                    reuseNode true
+                      }
+                            }
                       dir('/var/jenkins_home/workspace/MavenProject/')   {
                           
                           sh 'docker build -t tunagar/mavenapp . '
