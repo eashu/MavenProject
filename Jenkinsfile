@@ -4,6 +4,7 @@ pipeline {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
+        docker:latest
           }
 
     stages {
@@ -24,14 +25,8 @@ pipeline {
         stage('create image and container') {
                   steps {
                       
-                      agent {
-                docker {
-                    image 'gradle:6.7-jdk11'
-                    
-                    reuseNode true
-                      }
-                            }
-                      dir('/var/jenkins_home/workspace/MavenProject/')   {
+                      
+                    /var/jenkins_home/workspace/MavenProject/')   {
                           
                           sh 'docker build -t tunagar/mavenapp . '
                           
